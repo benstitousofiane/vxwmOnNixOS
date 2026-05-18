@@ -1,8 +1,14 @@
 # vxwm on NixOS
-This readme is curently in editing...
+
+# For anyone who want to install vxwm on NixOS beacause of this is the best distrib, it's HERE ! :D
+
+First thing : PLEASE wh1tepearl, make your features avaible directly on dwm or finish your compilation time started since one mounth !!! 
+(https://www.reddit.com/r/NixOS/comments/1sjg16p/algu%C3%A9m_sabe_se_o_vxwm_est%C3%A1_no_nixpkgs/?tl=en)
+
+Second thing : It make many time for me to config all of this setup for newbie on NixOS as me, ask question on pull requests if it not works. In fact NixOS is reproducible and if it works on my computer, it will works on yours !
 
 My readme :
-## What i edit for it works ?
+## What I edit for it works ?
 I edit **config.def.h** wich have an error with "zoom" variable and rename it as the developer want : "swapmaster" and forgot to rename it, that is make an error when make is running.
 
 ### 1. Edit this par your system config file /etc/nixos/configuration.nix
