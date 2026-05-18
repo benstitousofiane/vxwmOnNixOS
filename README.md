@@ -46,6 +46,12 @@ touch .xinitrc
 exec vxwm
 ```
 
+### 4. On your Tty run X11 and Enjoy !
+```sh
+starx
+```
+### 5. update for run it more easly ?
+I don't no, soon maybe...
 
 From original readme
 
