@@ -1,4 +1,40 @@
-# vxwm
+# vxwm on NixOS
+This readme is curently in editing...
+My readme :
+
+Edit this par your system config file /etc/nixos/configuration.nix
+```nix
+environment.systemPackages = with pkgs; [
+	#your packages add youself
+	#....
+
+	#--- Adding vxwm --- 
+    libx11 libxft libxinerama gnumake
+    # fork
+    (stdenv.mkDerivation rec {
+      name = "hello-2.8";
+      src = fetchgit {
+        url = "https://github.com/benstitousofiane/vxwmOnNixOS.git";
+        #The hash is got by the return of sudo "nixos-rebuild switch" error. 
+        hash = "sha256-qSZRoO70EGdpxmNFK/z/JeJOjI0T5O7LrX7T0Fqtmd4=";
+      };
+      
+      #Depedences :
+      buildInputs = [
+        xorg.libX11
+        xorg.libXft
+        xorg.libXinerama
+      ];
+      # For allow the script install to make dir for exemple /usr
+      makeFlags = [ "PREFIX=$(out)" ];
+    })
+    #-------------------
+
+];
+```
+
+From original readme
+
 
 vxwm - Versatile X Window Manager for X11 forked from `dwm`.
 
