@@ -2,7 +2,7 @@
 This readme is curently in editing...
 My readme :
 
-Edit this par your system config file /etc/nixos/configuration.nix
+### 1. Edit this par your system config file /etc/nixos/configuration.nix
 ```nix
 environment.systemPackages = with pkgs; [
 	#your packages add youself
@@ -31,6 +31,16 @@ environment.systemPackages = with pkgs; [
     #-------------------
 ];
 ```
+### 2. than make a .xinitrc file on your ~/ directory
+```sh
+touch .xinitrc 
+```
+
+### 3. With nano edit your .xinitrc file and put this line
+```sh
+exec vxwm
+```
+
 
 From original readme
 
