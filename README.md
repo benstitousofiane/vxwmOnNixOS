@@ -1,15 +1,19 @@
 # vxwm on NixOS
 This readme is curently in editing...
+
 My readme :
+## What i edit for it works ?
+I edit **config.def.h** wich have an error with "zoom" variable and rename it as the developer want : "swapmaster" and forgot to rename it, that is make an error when make is running.
 
 ### 1. Edit this par your system config file /etc/nixos/configuration.nix
 ```nix
 environment.systemPackages = with pkgs; [
-	#your packages add youself
+	#your packages added by youself
 	#....
 
     #--- Adding vxwm --- 
-    libx11 libxft libxinerama gnumake
+    #for make the link between X11 and vxwm bu .xinitrc
+    xorg.xinit
     # fork
     (stdenv.mkDerivation rec {
       name = "vxwm";
