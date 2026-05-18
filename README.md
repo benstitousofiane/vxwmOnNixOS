@@ -36,7 +36,7 @@ environment.systemPackages = with pkgs; [
 touch .xinitrc 
 ```
 
-### 3. With a text editor as <u>nano</u> edit your .xinitrc file and put this line
+### 3. With a text editor as <u>nano<u> edit your .xinitrc file and put this line
 ```sh
 exec vxwm
 ```
