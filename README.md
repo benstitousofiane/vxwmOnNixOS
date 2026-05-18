@@ -35,22 +35,28 @@ environment.systemPackages = with pkgs; [
     #-------------------
 ];
 ```
-### 2. than make a .xinitrc file on your ~/ directory
+### 2. PLEASE, PLEASE PLEASE, for your keyboard works add this line after "services.xserver.enable = true;"
+```nix
+services.xserver.enable = true;
+ #This is making work inputs !!!!!! I struggled to understand why my keybaord stopped working !!! 
+ services.xserver.displayManager.startx.enable = true;
+```
+### 3. than make a .xinitrc file on your ~/ directory
 ```sh
 touch .xinitrc 
 ```
 
-### 3. With a text editor as nano edit your .xinitrc file and put this line
+### 4. With a text editor as nano edit your .xinitrc file and put this line
 ```sh
 # nano .xinitrc
 exec vxwm
 ```
 
-### 4. On your Tty run X11 and Enjoy !
+### 5. On your Tty run X11 and Enjoy !
 ```sh
 starx
 ```
-### 5. update for run it more easly ?
+### 6. update for run it more easly ?
 I don't no, soon maybe...
 
 From original readme
