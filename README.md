@@ -8,11 +8,11 @@ environment.systemPackages = with pkgs; [
 	#your packages add youself
 	#....
 
-	#--- Adding vxwm --- 
+    #--- Adding vxwm --- 
     libx11 libxft libxinerama gnumake
     # fork
     (stdenv.mkDerivation rec {
-      name = "hello-2.8";
+      name = "vxwm";
       src = fetchgit {
         url = "https://github.com/benstitousofiane/vxwmOnNixOS.git";
         #The hash is got by the return of sudo "nixos-rebuild switch" error. 
@@ -29,7 +29,6 @@ environment.systemPackages = with pkgs; [
       makeFlags = [ "PREFIX=$(out)" ];
     })
     #-------------------
-
 ];
 ```
 
