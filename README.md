@@ -67,7 +67,7 @@ starx
 ### 7 Additionnal things
 
 For edit DPI and mouse size, add these lines on your config afer services.xserver.enable = true;
-```
+```nix
   services.xserver.enable = true;
   #Add these lines
   services.xserver.upscaleDefaultCursor = true;
