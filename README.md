@@ -62,18 +62,21 @@ exec vxwm
 ```sh
 starx
 ```
+
+
 ### 7 Additionnal things
 
 For edit DPI and mouse size, add these lines on your config afer services.xserver.enable = true;
+```
   services.xserver.enable = true;
   #Add these lines
   services.xserver.upscaleDefaultCursor = true;
   services.xserver.dpi = 192;
+```
 
 
-
+# Author readme :
 ## About
-
 vxwm represents a significantly enhanced version of `dwm` that maintains its
 lightweight nature while offering modular flexibility. Instead of manually
 applying patches, you can toggle pre-installed features directly in the
