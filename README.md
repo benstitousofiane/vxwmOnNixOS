@@ -62,13 +62,15 @@ exec vxwm
 ```sh
 starx
 ```
-### 6. update for run it more easly ?
-I don't no, soon maybe...
+### 7 Additionnal things
 
-From original readme
+For edit DPI and mouse size, add these lines on your config afer services.xserver.enable = true;
+  services.xserver.enable = true;
+  #Add these lines
+  services.xserver.upscaleDefaultCursor = true;
+  services.xserver.dpi = 192;
 
 
-vxwm - Versatile X Window Manager for X11 forked from `dwm`.
 
 ## About
 
